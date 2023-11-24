@@ -18,5 +18,5 @@ app.get('/addTwoNumbers',(req,res)=>{
 });
 
 app.listen(port, ()=>{
-    console.log('server started - 2');
+    console.log('server started');
 });

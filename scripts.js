@@ -22,7 +22,13 @@ const submitForm = () => {
     formData.last_name = $('#last_name').val();
     formData.password = $('#password').val();
     formData.email = $('#email').val();
+    if(formData.first_name === '' || formData.last_name === '' || formData.password ==='' || formData.email==''){
+        alert("Please provide all information");
+        return ;
+    }
     console.log("Form Data Submitted: ", formData);
+    document.getElementById("modal1").style.display="none";
+    document.querySelector(".modal-overlay").style.opacity=0;
 }
 const addCards = (items) => {
     items.forEach(item => {
